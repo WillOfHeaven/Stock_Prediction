@@ -149,7 +149,7 @@ data_training_array = scaler.fit_transform(data_training)
 
 #Loading the model
 
-model = load_model('https://github.com/WillOfHeaven/Stock_Prediction/blob/0bb4797b22697bcabee2ff68b6408033084de42c/keras_mode.h5')
+model = load_model('keras_mode.h5')
 
 #feeding the data to the model
 
