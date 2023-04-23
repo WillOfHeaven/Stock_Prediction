@@ -205,3 +205,5 @@ fig2.update_layout(
 st.subheader('Prediction using LSTM model')
 
 st.plotly_chart(fig2, use_container_width=True)
+st.write("Made by Sammy ---- urf Sambuddha Chatterjee, yes! and I did follow the geek for geeks tutorial ")
+st.write("  a Stock Prediction App built using Streamlit, Keras, and Plotly! The app predicts stock prices based on Moving Averages of 100 and 200 days and also uses LSTM for more accurate predictions. I added a personal touch by using Plotly to create an interactive graph instead of images of graphs. As the Yahoo API was deprecated, I utilized Alpha Vantage for stock data. It was a challenging and rewarding project, and I learned a lot in the process! ")
