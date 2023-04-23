@@ -149,7 +149,7 @@ data_training_array = scaler.fit_transform(data_training)
 
 #Loading the model
 
-model = load_model('C:\\Users\\KIIT\\Desktop\\Geeky Learners\\keras_mode.h5')
+model = load_model('keras_mode.h5')
 
 #feeding the data to the model
 
