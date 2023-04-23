@@ -63,6 +63,20 @@ df = df.rename(columns={'1. open':'open','2. high':'high','3. low':'low'})
 st.subheader('Raw Data for the stock symbol: '+user_input+'\n Time Period : '+str(date_before)+' to '+str(today))
 st.write(df.describe())
 
+@st.cache_data
+def convert_df(df):
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+    return df.to_csv().encode('utf-8')
+
+csv = convert_df(df)
+st.download_button(
+    label="Download data as CSV",
+    data= csv ,
+    file_name=user_input+'_data.csv',
+    mime='text/csv',
+)
+
+
 #Visualizing Data
 
 st.subheader('Closing Price vs Time Chart')
