@@ -12,7 +12,7 @@ import datetime
 import sklearn
 # Enter your Alpha Vantage API key
 
-api_key = 'XO2YT4XMHPUERBBP'
+api_key = st.secrets[REACT_APP_ALPHA_VANTAGE_API_KEY]
 
 import datetime
 days_val = 720
