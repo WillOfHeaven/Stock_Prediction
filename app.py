@@ -11,7 +11,6 @@ import streamlit as st
 import datetime
 import sklearn
 # Enter your Alpha Vantage API key
-
 api_key = st.secrets["api_key"]
 
 import datetime
@@ -28,19 +27,19 @@ user_input = st.text_input("Enter the stock symbol", 'IBM')
 # Specify the API endpoint and query parameters
 url = 'https://www.alphavantage.co/query'
 params = {
-    'function': 'TIME_SERIES_DAILY_ADJUSTED',
+    'function': 'TIME_SERIES_DAILY',
     'symbol': user_input,
     'apikey': api_key,
     'outputsize': 'full'
-    
 }
 
 # Send the API request and parse the JSON response
 response = requests.get(url, params=params)
 data_IBM = js.loads(response.text)
+# print(data_IBM)
 daily_data = data_IBM['Time Series (Daily)']
 dates = list(daily_data.keys())[:days_val][::-1]  # Slice the most recent 600 dates and reverse the order
-header = ['Date', '1. open', '2. high', '3. low', '4. close', '5. adjusted close', '6. volume', '7. dividend amount', '8. split coefficient']
+header = ['Date', '1. open', '2. high', '3. low', '4. close', '5. volume']
 rows = []
 for date in dates:
     row = [date] + [float(daily_data[date][col]) for col in header[1:]]
@@ -54,7 +53,7 @@ with open('data_IBM.csv', 'w', newline='') as csvfile:
 import pandas as pd
 # Read CSV file into a pandas DataFrame
 df = pd.read_csv('data_IBM.csv')
-df = df.rename(columns={'4. close':'close','6. volume':'volume','7. dividend amount':'d_amt','8. split coefficient':'sc'})
+df = df.rename(columns={'4. close':'close','5. volume':'volume'})
 df = df.rename(columns={'1. open':'open','2. high':'high','3. low':'low'})
 #df.drop([dividend amount', '8. split coefficient'], axis=1, inplace=True)
 
