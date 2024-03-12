@@ -37,8 +37,15 @@ params = {
 # Send the API request and parse the JSON response
 response = requests.get(url, params=params)
 data_IBM = js.loads(response.text)
-# print(data_IBM)
+#st.write(data_IBM)
 daily_data = data_IBM['Time Series (Daily)']
+try:
+  daily_data = data_IBM['Time Series (Daily)']
+except KeyError:
+  print("Error: 'Time Series (Daily)' key not found in data")
+  # Handle the missing key here (e.g., display an error message, try a different source)
+  # You can exit the script or use a default value depending on your application logic
+  exit()  # Example of exiting if the key is missing
 dates = list(daily_data.keys())[:days_val][::-1]  # Slice the most recent 600 dates and reverse the order
 header = ['Date', '1. open', '2. high', '3. low', '4. close', '5. volume']
 rows = []
