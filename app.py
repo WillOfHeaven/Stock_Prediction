@@ -37,6 +37,12 @@ params = {
 # Send the API request and parse the JSON response
 response = requests.get(url, params=params)
 data_IBM = js.loads(response.text)
+st.write(data_IBM.keys())
+if 'Time Series (Daily)' in data_IBM:
+  daily_data = data_IBM['Time Series (Daily)']
+else:
+  print("Error: 'Time Series (Daily)' key not found in data")
+  # Handle the missing key here (e.g., display an error message, try a different source)
 #st.write(data_IBM)
 try:
   daily_data = data_IBM['Time Series (Daily)']
