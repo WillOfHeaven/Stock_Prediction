@@ -42,6 +42,7 @@ try:
   daily_data = data_IBM['Time Series (Daily)']
 except KeyError:
   print("Error: 'Time Series (Daily)' key not found in data")
+  st.write("Error: 'Time Series (Daily)' key not found in data")
   # Handle the missing key here (e.g., display an error message, try a different source)
   # You can exit the script or use a default value depending on your application logic
   exit()  # Example of exiting if the key is missing
