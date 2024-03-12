@@ -38,7 +38,6 @@ params = {
 response = requests.get(url, params=params)
 data_IBM = js.loads(response.text)
 #st.write(data_IBM)
-daily_data = data_IBM['Time Series (Daily)']
 try:
   daily_data = data_IBM['Time Series (Daily)']
 except KeyError:
