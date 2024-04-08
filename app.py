@@ -41,7 +41,7 @@ st.write(data_IBM.keys())
 if 'Time Series (Daily)' in data_IBM:
   daily_data = data_IBM['Time Series (Daily)']
 else:
-  print("Error: 'Time Series (Daily)' key not found in data")
+  print("Error: 'Time Series (Daily)' key not found in data, Daily API limit reached")
   # Handle the missing key here (e.g., display an error message, try a different source)
 #st.write(data_IBM)
 try:
