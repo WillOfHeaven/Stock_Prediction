@@ -21,7 +21,7 @@ visualization.
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/stock-price-prediction.git
+   https://github.com/WillOfHeaven/Stock_Prediction.git
    ```
 
 2. Install the required packages:
@@ -32,7 +32,7 @@ visualization.
 3. Set up your Alpha Vantage API key:
    - Sign up for a free API key at [Alpha Vantage](
 https://www.alphavantage.co/)
-   - Replace `api_key = 'XO2YT4XMHPUERBBP'` with your actual API key in the
+   - Replace `api_key = 'XXXXXXXXXXXXXXXXX'` with your actual API key in the
 script
 
 ### Usage
@@ -100,8 +100,7 @@ The Streamlit app is structured as follows:
 numpy, csv, json, matplotlib, pandas_datareader, pickle, requests, keras,
 streamlit, datetime, sklearn, plotly
 
-## Part 2: Advanced Analysis - Improving Stock Price Forecasting with
-Bidirectional LSTM and Moving Averages
+## Part 2: Advanced Analysis - Improving Stock Price Forecasting with Bidirectional LSTM and Moving Averages
 
 ### Motivation
 After developing the Streamlit app, I saw an opportunity to deepen my
@@ -109,8 +108,9 @@ understanding of stock price prediction techniques. This led to a
 comprehensive analysis focusing on Bidirectional LSTM models and the use of
 moving averages for forecasting.
 
-### Analysis Report: "Improving Bidirectional LSTM for Stock Price
-Forecasting with Moving Averages"
+### Analysis Report: "Improving Bidirectional LSTM for Stock Price Forecasting with Moving Averages"
+
+[Report Link] [https://drive.google.com/file/d/1yQ8ulTk1LsFUnp9mPglbgxG5TXK20Hb7/view?usp=sharing]
 
 #### Author
 Sambuddha Chatterjee
